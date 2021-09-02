@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/0b5ce08098.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <navbar class="menu">
+        <div>
+            <i class="fas fa-bars"></i>
+            <input type="text" placeholder="Search.." name="search">
+            <i class="fas fa-search"></i>
+        </div>
+        
+        <div>
+            <i class="fas fa-user-circle"></i>
+            <p>Admin</p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        
+    </navbar>
+    <navbar class="sidebar">
+        <h1>DCSoft - Admin</h1>
+        <a>Nástěnka</a>
+        <p>Moduly</p>
+        <a>Položky</a>
+        <a>Příspěvky</a>
+        <a>Tabulky</a>
+        <a>Grafy</a>
+        <a>Mapy</a>
+        <p>Sekce</p>
+        <a>Pošta</a>
+        <a>Kalendář</a>
+        <a>Stránky</a>
+        <a>Struktura</a>
+    </navbar>
+    
+    <div class="box">
+        <div class="box1">
+            <p>120</p>
+            <p>Nových uživatelů</p>
+            <p>10%</p>
+        </div>
+        <div class="box2">
+            <p>2500</p>
+            <p>Zobrazení</p>
+            <p>25%</p>
+        </div>
+        <div class="box3">
+            <p>270</p>
+            <p>Prokliků</p>
+            <p>-4%</p>
+        </div>
+        <div class="box4">
+            <p>138</p>
+            <p>Sdílení</p>
+            <p>-8%</p>
+        </div>
+    </div>
+
+    <div class="container-big">
+        <class class="cantainer-left">
+            <div>
+                <canvas id="firstChart"></canvas>
+            </div>
+                
+
+
+            <table>
+                    <tr>
+                      <th>Naposledy</th>
+                      <th>ID</th>
+                      <th>OS</th>
+                      <th>Prohlížeč</th>
+                      <th>Dnes</th>
+                      <th>Celkem</th>
+                    </tr>
+                    <tr>
+                      <td>28.6. 2021</td>
+                      <td>100308</td>
+                      <td>Windows 10</td>
+                      <td>Firefox</td>
+                      <td>25</td>
+                      <td>2225</td>
+                    </tr>
+                    <tr>
+                      <td>1.7. 2021</td>
+                      <td>100255</td>
+                      <td>Android</td>
+                      <td>Chrome</td>
+                      <td>20</td>
+                      <td>2123</td>
+                    </tr>
+                    <tr>
+                      <td>28.6. 2021</td>
+                      <td>100422</td>
+                      <td>iOS</td>
+                      <td>Safari</td>
+                      <td>15</td>
+                      <td>1565</td>
+                    </tr>
+                    <tr>
+                      <td>28.6. 2021</td>
+                      <td>100356</td>
+                      <td>Windows 8</td>
+                      <td>Chrome</td>
+                      <td>11</td>
+                      <td>1132</td>
+                    </tr>
+                    <tr>
+                      <td>30.6. 2021</td>
+                      <td>100401</td>
+                      <td>Linux</td>
+                      <td>Firefox</td>
+                      <td>9</td>
+                      <td>989</td>
+                    </tr>
+                    <tr>
+                      <td>30.6. 2021</td>
+                      <td>100322</td>
+                      <td>macOS</td>
+                      <td>Safari</td>
+                      <td>6</td>
+                      <td>900</td>
+                    </tr>
+                    <tr>
+                      <td>1.7. 2021</td>
+                      <td>100456</td>
+                      <td>Windows 8</td>
+                      <td>Opera</td>
+                      <td>3</td>
+                      <td>527</td>
+                    </tr>
+                    
+            </table>
+            
+        </div>
+        <div class="container-right">
+        
+            <div>
+                <canvas id="secondChart"></canvas>
+                
+            </div>
+            
+                
+               
+                
+            
+            
+        </div>
+        
+    </div>
+    <footer>
+
+    </footer>
+
+    <script>
+        window.onload = function() {
+            var ctx = document.getElementById("firstChart").getContext('2d');
+
+            var firstChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                labels: ["3", "6", "9", "12", "16", "20", "24", "28", "30"],
+                datasets: [
+                    {
+                        label: 'My First Dataset',
+                        data: [100, 70, 100, 50, 70, 55, 85, 60, 40],
+                        fill: false,
+                        
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    },
+                    {
+                        label: 'My Sceond Dataset',
+                        data: [30, 40, 35, 80, 50, 40, 25, 50, 70],
+                        fill: false,
+                        borderColor: 'rgb(75,0,130)',
+                        tension: 0.1
+                    }
+            
+                ]
+                },
+                options: {
+                responsive: true,
+                maintainAspectRatio: false
+                }
+            });
+
+            var ctx2 = document.getElementById("secondChart").getContext('2d');
+
+            var secondChart = new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                labels: ["Počítač", "Mobil", "Tablet"],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [52, 27, 21],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    hoverOffset: 4
+                }]
+                },
+                options: {
+                responsive: true,
+                maintainAspectRatio: false
+                }
+            });
+            }
+    </script>
+</body>
+</html>
