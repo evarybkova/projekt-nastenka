@@ -15,65 +15,67 @@
 <body>
     
         <ul class="sidebar">
-            <li>
-                <h2>DCSoft - Admin</h2>
+            <li class="da">
+                <h2>DA</h2>
+            </li>
+            <li class="sidebar-active">
                 <i class="fas fa-th-large"></i>
-                <a>Nástěnka</a>
+                <!-- <a>Nástěnka</a> -->
             </li>
             <li>
-                <p>Moduly</p>
+                <!-- <p>Moduly</p> -->
             </li>
             <li>
                 <i class="fas fa-bookmark"></i>
-                <a>Položky</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Položky</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-edit"></i>
-                <a>Příspěvky</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Příspěvky</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-table"></i>
-                <a>Tabulky</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Tabulky</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-chart-bar"></i>
-                <a>Grafy</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Grafy</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-map"></i>
-                <a>Mapy</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Mapy</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
-            <li>
+            <!-- <li>
                 <p>Sekce</p>
-            </li>
+            </li> -->
             <li>
                 <i class="fas fa-envelope"></i>
-                <a>Pošta</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Pošta</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-calendar-alt"></i>
-                <a>Kalendář</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Kalendář</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-file-alt"></i>
-                <a>Stránky</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Stránky</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
             <li>
                 <i class="fas fa-sitemap"></i>
-                <a>Struktura</a>
-                <i class="fas fa-chevron-left"></i>
+                <!-- <a>Struktura</a>
+                <i class="fas fa-chevron-left"></i> -->
             </li>
         </ul>
     
-    <div class="content">
+    <div class="content"> 
         <navbar class="menu">
             <div class="menu-searchbar">
                 <i class="fas fa-bars"></i>
@@ -88,6 +90,8 @@
             </div>
                 
         </navbar>
+
+       
         
         <div class="boxgrid">
             <div class="boxgrid-box-green">
@@ -113,89 +117,88 @@
         </div>
 
         <div class="container-big">
-            <class class="cantainer-left">
-                <div>
-                    <p>Podíl zařízení za poslední měsíc</p>
-                    
+            <div class="cantainer-left">
+                <div class="chart"> 
+                    <p>Statistika návštěvnosti</p>
                     <canvas id="firstChart"></canvas>
                 </div>
                     
 
 
-                <table>
-                        <tr>
-                        <th>Naposledy</th>
-                        <th>ID</th>
-                        <th>OS</th>
-                        <th>Prohlížeč</th>
-                        <th>Dnes</th>
-                        <th>Celkem</th>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100308</td>
-                        <td>Windows 10</td>
-                        <td>Firefox</td>
-                        <td>25</td>
-                        <td>2225</td>
-                        </tr>
-                        <tr>
-                        <td>1.7. 2021</td>
-                        <td>100255</td>
-                        <td>Android</td>
-                        <td>Chrome</td>
-                        <td>20</td>
-                        <td>2123</td>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100422</td>
-                        <td>iOS</td>
-                        <td>Safari</td>
-                        <td>15</td>
-                        <td>1565</td>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100356</td>
-                        <td>Windows 8</td>
-                        <td>Chrome</td>
-                        <td>11</td>
-                        <td>1132</td>
-                        </tr>
-                        <tr>
-                        <td>30.6. 2021</td>
-                        <td>100401</td>
-                        <td>Linux</td>
-                        <td>Firefox</td>
-                        <td>9</td>
-                        <td>989</td>
-                        </tr>
-                        <tr>
-                        <td>30.6. 2021</td>
-                        <td>100322</td>
-                        <td>macOS</td>
-                        <td>Safari</td>
-                        <td>6</td>
-                        <td>900</td>
-                        </tr>
-                        <tr>
-                        <td>1.7. 2021</td>
-                        <td>100456</td>
-                        <td>Windows 8</td>
-                        <td>Opera</td>
-                        <td>3</td>
-                        <td>527</td>
-                        </tr>
+                <table class="table">
+                    <tr>
+                    <th>Naposledy</th>
+                    <th>ID</th>
+                    <th>OS</th>
+                    <th>Prohlížeč</th>
+                    <th>Dnes</th>
+                    <th>Celkem</th>
+                    </tr>
+                    <tr>
+                    <td>28.6. 2021</td>
+                    <td>100308</td>
+                    <td>Windows 10</td>
+                    <td>Firefox</td>
+                    <td>25</td>
+                    <td>2225</td>
+                    </tr>
+                    <tr>
+                    <td>1.7. 2021</td>
+                    <td>100255</td>
+                    <td>Android</td>
+                    <td>Chrome</td>
+                    <td>20</td>
+                    <td>2123</td>
+                    </tr>
+                    <tr>
+                    <td>28.6. 2021</td>
+                    <td>100422</td>
+                    <td>iOS</td>
+                    <td>Safari</td>
+                    <td>15</td>
+                    <td>1565</td>
+                    </tr>
+                    <tr>
+                    <td>28.6. 2021</td>
+                    <td>100356</td>
+                    <td>Windows 8</td>
+                    <td>Chrome</td>
+                    <td>11</td>
+                    <td>1132</td>
+                    </tr>
+                    <tr>
+                    <td>30.6. 2021</td>
+                    <td>100401</td>
+                    <td>Linux</td>
+                    <td>Firefox</td>
+                    <td>9</td>
+                    <td>989</td>
+                    </tr>
+                    <tr>
+                    <td>30.6. 2021</td>
+                    <td>100322</td>
+                    <td>macOS</td>
+                    <td>Safari</td>
+                    <td>6</td>
+                    <td>900</td>
+                    </tr>
+                    <tr>
+                    <td>1.7. 2021</td>
+                    <td>100456</td>
+                    <td>Windows 8</td>
+                    <td>Opera</td>
+                    <td>3</td>
+                    <td>527</td>
+                    </tr>
                         
                 </table>
                 
             </div>
             <div class="container-right">
             
-                <div>
-                    <canvas id="secondChart"></canvas>
-                    
+                <div class="chart">
+                    <p>Podíl zařízení za poslední měsíc</p>
+                    <canvas id="secondChart"></canvas>      
                 </div>
                 
                     
@@ -206,9 +209,7 @@
             </div>
             
         </div>
-        <footer>
-
-        </footer>
+        <footer></footer>
     </div>
     <script>
         window.onload = function() {
@@ -222,15 +223,16 @@
                     {
                         label: 'My First Dataset',
                         data: [100, 70, 100, 50, 70, 55, 85, 60, 40],
-                        fill: false,
-                        
+                        fill: true,
+                        backgroundColor: 'rgba(75, 192, 192, .623)',
                         borderColor: 'rgb(75, 192, 192)',
                         tension: 0.1
                     },
                     {
                         label: 'My Sceond Dataset',
                         data: [30, 40, 35, 80, 50, 40, 25, 50, 70],
-                        fill: false,
+                        fill: true,
+                        backgroundColor: 'rgba(75, 0, 130, .623)',
                         borderColor: 'rgb(75,0,130)',
                         tension: 0.1
                     }
@@ -239,7 +241,8 @@
                 },
                 options: {
                 responsive: true,
-                maintainAspectRatio: true
+                maintainAspectRatio: true,
+                
                 }
             });
 
@@ -252,6 +255,7 @@
                 datasets: [{
                     label: 'My First Dataset',
                     data: [52, 27, 21],
+                    
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
@@ -261,11 +265,22 @@
                 }]
                 },
                 options: {
-                responsive: true,
-                maintainAspectRatio: true
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    
+
+
+                
                 }
+                
+
+                
             });
-            }
+        }
+
+        
+
+
     </script>
 </body>
 </html>
