@@ -20,58 +20,58 @@
             </li>
             <li class="sidebar-active">
                 <i class="fas fa-th-large"></i>
-                <!-- <a>Nástěnka</a> -->
+                <a>Nástěnka</a>
             </li>
             <li>
-                <!-- <p>Moduly</p> -->
+                <p>Moduly</p>
             </li>
             <li>
                 <i class="fas fa-bookmark"></i>
-                <!-- <a>Položky</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Položky</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-edit"></i>
-                <!-- <a>Příspěvky</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Příspěvky</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-table"></i>
-                <!-- <a>Tabulky</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Tabulky</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-chart-bar"></i>
-                <!-- <a>Grafy</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Grafy</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-map"></i>
-                <!-- <a>Mapy</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Mapy</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
-            <!-- <li>
+            <li>
                 <p>Sekce</p>
-            </li> -->
+            </li>
             <li>
                 <i class="fas fa-envelope"></i>
-                <!-- <a>Pošta</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Pošta</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-calendar-alt"></i>
-                <!-- <a>Kalendář</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Kalendář</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-file-alt"></i>
-                <!-- <a>Stránky</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Stránky</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
             <li>
                 <i class="fas fa-sitemap"></i>
-                <!-- <a>Struktura</a>
-                <i class="fas fa-chevron-left"></i> -->
+                <a>Struktura</a>
+                <i class="fas fa-chevron-left"></i>
             </li>
         </ul>
     
@@ -79,14 +79,16 @@
         <navbar class="menu">
             <div class="menu-searchbar">
                 <i class="fas fa-bars"></i>
-                <input type="text" placeholder="Search.." name="search">
-                <i class="fas fa-search"></i>
+                <input class="searchbar"type="text" placeholder="Vyhledat" name="search"><i class="fas fa-search"></i>
             </div>
                 
             <div class="menu-admin">
+
                 <i class="fas fa-user-circle"></i>
+                
                 <p>Admin</p>
                 <i class="fas fa-chevron-down"></i>
+                   
             </div>
                 
         </navbar>
@@ -95,110 +97,124 @@
         
         <div class="boxgrid">
             <div class="boxgrid-box-green">
-                <p class="box-text">120</p>
+                <p class="box-text-bold">120</p>
                 <p class="box-text">NOVÝCH UŽIVATELŮ</p>
                 <p class="box-text"><i class="fas fa-level-up-alt"></i> 10%</p>
             </div>
             <div class="boxgrid-box-blue">
-                <p class="box-text">2500</p>
+                <p class="box-text-bold">2500</p>
                 <p class="box-text">ZOBRAZENÍ</p>
                 <p class="box-text"><i class="fas fa-level-up-alt"></i> 25%</p>
             </div>
             <div class="boxgrid-box-yellow">
-                <p class="box-text">270</p>
+                <p class="box-text-bold">270</p>
                 <p class="box-text">PROKLIKŮ</p>
                 <p class="box-text"><i class="fas fa-level-down-alt"></i> -4%</p>
             </div>
             <div class="boxgrid-box-red">
-                <p class="box-text">138</p>
+                <p class="box-text-bold">138</p>
                 <p class="box-text">SDÍLENÍ</p>
                 <p class="box-text"><i class="fas fa-level-down-alt"></i> -8%</p>
             </div>
         </div>
 
         <div class="container-big">
-            <div class="cantainer-left">
+            <div class="container-left">
                 <div class="chart"> 
-                    <p>Statistika návštěvnosti</p>
+                    <p class="chart-title">Statistika návštěvnosti</p>
+                    <p class="chart-spec-right">10%</p><br>
+                    <p class="chart-spec-right">Průměrný nárůst</p>
                     <canvas id="firstChart"></canvas>
                 </div>
                     
 
-
-                <table class="table">
-                    <tr>
-                    <th>Naposledy</th>
-                    <th>ID</th>
-                    <th>OS</th>
-                    <th>Prohlížeč</th>
-                    <th>Dnes</th>
-                    <th>Celkem</th>
-                    </tr>
-                    <tr>
-                    <td>28.6. 2021</td>
-                    <td>100308</td>
-                    <td>Windows 10</td>
-                    <td>Firefox</td>
-                    <td>25</td>
-                    <td>2225</td>
-                    </tr>
-                    <tr>
-                    <td>1.7. 2021</td>
-                    <td>100255</td>
-                    <td>Android</td>
-                    <td>Chrome</td>
-                    <td>20</td>
-                    <td>2123</td>
-                    </tr>
-                    <tr>
-                    <td>28.6. 2021</td>
-                    <td>100422</td>
-                    <td>iOS</td>
-                    <td>Safari</td>
-                    <td>15</td>
-                    <td>1565</td>
-                    </tr>
-                    <tr>
-                    <td>28.6. 2021</td>
-                    <td>100356</td>
-                    <td>Windows 8</td>
-                    <td>Chrome</td>
-                    <td>11</td>
-                    <td>1132</td>
-                    </tr>
-                    <tr>
-                    <td>30.6. 2021</td>
-                    <td>100401</td>
-                    <td>Linux</td>
-                    <td>Firefox</td>
-                    <td>9</td>
-                    <td>989</td>
-                    </tr>
-                    <tr>
-                    <td>30.6. 2021</td>
-                    <td>100322</td>
-                    <td>macOS</td>
-                    <td>Safari</td>
-                    <td>6</td>
-                    <td>900</td>
-                    </tr>
-                    <tr>
-                    <td>1.7. 2021</td>
-                    <td>100456</td>
-                    <td>Windows 8</td>
-                    <td>Opera</td>
-                    <td>3</td>
-                    <td>527</td>
-                    </tr>
-                        
-                </table>
-                
+                <div class="scroll">
+                    <table class="table">
+                        <tr>
+                        <th>Naposledy</th>
+                        <th>ID</th>
+                        <th>OS</th>
+                        <th>Prohlížeč</th>
+                        <th>Dnes</th>
+                        <th>Celkem</th>
+                        </tr>
+                        <tr>
+                        <td>28.6. 2021</td>
+                        <td>100308</td>
+                        <td>Windows 10</td>
+                        <td>Firefox</td>
+                        <td>25</td>
+                        <td>2225</td>
+                        </tr>
+                        <tr>
+                        <td>1.7. 2021</td>
+                        <td>100255</td>
+                        <td>Android</td>
+                        <td>Chrome</td>
+                        <td>20</td>
+                        <td>2123</td>
+                        </tr>
+                        <tr>
+                        <td>28.6. 2021</td>
+                        <td>100422</td>
+                        <td>iOS</td>
+                        <td>Safari</td>
+                        <td>15</td>
+                        <td>1565</td>
+                        </tr>
+                        <tr>
+                        <td>28.6. 2021</td>
+                        <td>100356</td>
+                        <td>Windows 8</td>
+                        <td>Chrome</td>
+                        <td>11</td>
+                        <td>1132</td>
+                        </tr>
+                        <tr>
+                        <td>30.6. 2021</td>
+                        <td>100401</td>
+                        <td>Linux</td>
+                        <td>Firefox</td>
+                        <td>9</td>
+                        <td>989</td>
+                        </tr>
+                        <tr>
+                        <td>30.6. 2021</td>
+                        <td>100322</td>
+                        <td>macOS</td>
+                        <td>Safari</td>
+                        <td>6</td>
+                        <td>900</td>
+                        </tr>
+                        <tr>
+                        <td>1.7. 2021</td>
+                        <td>100456</td>
+                        <td>Windows 8</td>
+                        <td>Opera</td>
+                        <td>3</td>
+                        <td>527</td>
+                        </tr>
+                            
+                    </table>
+                </div>
             </div>
             <div class="container-right">
             
                 <div class="chart">
-                    <p>Podíl zařízení za poslední měsíc</p>
-                    <canvas id="secondChart"></canvas>      
+                    
+                    <p class="chart-title">Podíl zařízení za poslední měsíc</p>
+
+                                
+
+                    <canvas id="secondChart"></canvas>
+                    <div  class="chart-spec-left">
+                        <p>Chrome</p> 
+                        <p>Firefox</p>
+                    </div>
+                    <div class="chart-spec-right">
+                        <p>34%</p>
+                        <p>10%</p>
+                    </div>      
                 </div>
                 
                     
@@ -240,8 +256,9 @@
                 ]
                 },
                 options: {
-                responsive: true,
-                maintainAspectRatio: true,
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    
                 
                 }
             });
@@ -251,36 +268,29 @@
             var secondChart = new Chart(ctx2, {
                 type: 'doughnut',
                 data: {
-                labels: ["Počítač", "Mobil", "Tablet"],
-                datasets: [{
-                    label: 'My First Dataset',
-                    data: [52, 27, 21],
-                    
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)'
-                    ],
-                    hoverOffset: 4
-                }]
+                    labels: ["Počítač", "Mobil", "Tablet"],
+                    datasets: [{
+                        label: 'My First Dataset',
+                        data: [52, 27, 21],
+                        
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)'
+                        ],
+                        hoverOffset: 4
+                    }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: true,
-                    
-
-
-                
+                    legend: {
+                        position: 'right',
+                        align: 'middle',
+                    },
                 }
-                
-
-                
             });
         }
-
-        
-
-
     </script>
 </body>
 </html>
