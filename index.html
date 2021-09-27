@@ -1,296 +1,293 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://kit.fontawesome.com/0b5ce08098.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/0b5ce08098.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-    
-        <ul class="sidebar">
-            <li class="da">
-                <h2>DA</h2>
-            </li>
-            <li class="sidebar-active">
-                <i class="fas fa-th-large"></i>
-                <a>Nástěnka</a>
-            </li>
-            <li>
-                <p>Moduly</p>
-            </li>
-            <li>
-                <i class="fas fa-bookmark"></i>
-                <a>Položky</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-edit"></i>
-                <a>Příspěvky</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-table"></i>
-                <a>Tabulky</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-chart-bar"></i>
-                <a>Grafy</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-map"></i>
-                <a>Mapy</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <p>Sekce</p>
-            </li>
-            <li>
-                <i class="fas fa-envelope"></i>
-                <a>Pošta</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-calendar-alt"></i>
-                <a>Kalendář</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-file-alt"></i>
-                <a>Stránky</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-            <li>
-                <i class="fas fa-sitemap"></i>
-                <a>Struktura</a>
-                <i class="fas fa-chevron-left"></i>
-            </li>
-        </ul>
-    
-    <div class="content"> 
-        <navbar class="menu">
-            <div class="menu-searchbar">
-                <i class="fas fa-bars"></i>
-                <input class="searchbar"type="text" placeholder="Vyhledat" name="search"><i class="fas fa-search"></i>
-            </div>
-                
-            <div class="menu-admin">
+  </head>
+  <body>
+    <ul class="sidebar">
+      <input type="checkbox" class="menu__checkbox" id="menu-checkbox" />
+      <li class="da">
+        <h2 class="h2-small">DA</h2>
+        <h2 class="h2-big">DCSoft - Admin</h2>
+      </li>
+      <li class="sidebar-active">
+        <i class="fas fa-th-large"></i>
+        <a>Nástěnka</a>
+      </li>
+      <li>
+        <p>Moduly</p>
+      </li>
+      <li>
+        <i class="fas fa-bookmark"></i>
+        <a>Položky</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-edit"></i>
+        <a>Příspěvky</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-table"></i>
+        <a>Tabulky</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-chart-bar"></i>
+        <a>Grafy</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-map"></i>
+        <a>Mapy</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <p>Sekce</p>
+      </li>
+      <li>
+        <i class="fas fa-envelope"></i>
+        <a>Pošta</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-calendar-alt"></i>
+        <a>Kalendář</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-file-alt"></i>
+        <a>Stránky</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+      <li>
+        <i class="fas fa-sitemap"></i>
+        <a>Struktura</a>
+        <i class="fas fa-chevron-left"></i>
+      </li>
+    </ul>
 
-                <i class="fas fa-user-circle"></i>
-                
-                <p>Admin</p>
-                <i class="fas fa-chevron-down"></i>
-                   
-            </div>
-                
-        </navbar>
-
-       
-        
-        <div class="boxgrid">
-            <div class="boxgrid-box-green">
-                <p class="box-text-bold">120</p>
-                <p class="box-text">NOVÝCH UŽIVATELŮ</p>
-                <p class="box-text"><i class="fas fa-level-up-alt"></i> 10%</p>
-            </div>
-            <div class="boxgrid-box-blue">
-                <p class="box-text-bold">2500</p>
-                <p class="box-text">ZOBRAZENÍ</p>
-                <p class="box-text"><i class="fas fa-level-up-alt"></i> 25%</p>
-            </div>
-            <div class="boxgrid-box-yellow">
-                <p class="box-text-bold">270</p>
-                <p class="box-text">PROKLIKŮ</p>
-                <p class="box-text"><i class="fas fa-level-down-alt"></i> -4%</p>
-            </div>
-            <div class="boxgrid-box-red">
-                <p class="box-text-bold">138</p>
-                <p class="box-text">SDÍLENÍ</p>
-                <p class="box-text"><i class="fas fa-level-down-alt"></i> -8%</p>
-            </div>
+    <div class="content">
+      <navbar class="menu">
+        <div class="menu-searchbar">
+          <label for="menu-checkbox" class="menu__toggler"><i class="fas fa-bars"></i></label>
+          <input
+            class="searchbar" type="text" placeholder="Vyhledat" name="search"/><i class="fas fa-search"></i>
         </div>
-
-        <div class="container-big">
-            <div class="container-left">
-                <div class="chart"> 
-                    <p class="chart-title">Statistika návštěvnosti</p>
-                    <p class="chart-spec-right">10%</p><br>
-                    <p class="chart-spec-right">Průměrný nárůst</p>
-                    <canvas id="firstChart"></canvas>
-                </div>
-                    
-
-                <div class="scroll">
-                    <table class="table">
-                        <tr>
-                        <th>Naposledy</th>
-                        <th>ID</th>
-                        <th>OS</th>
-                        <th>Prohlížeč</th>
-                        <th>Dnes</th>
-                        <th>Celkem</th>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100308</td>
-                        <td>Windows 10</td>
-                        <td>Firefox</td>
-                        <td>25</td>
-                        <td>2225</td>
-                        </tr>
-                        <tr>
-                        <td>1.7. 2021</td>
-                        <td>100255</td>
-                        <td>Android</td>
-                        <td>Chrome</td>
-                        <td>20</td>
-                        <td>2123</td>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100422</td>
-                        <td>iOS</td>
-                        <td>Safari</td>
-                        <td>15</td>
-                        <td>1565</td>
-                        </tr>
-                        <tr>
-                        <td>28.6. 2021</td>
-                        <td>100356</td>
-                        <td>Windows 8</td>
-                        <td>Chrome</td>
-                        <td>11</td>
-                        <td>1132</td>
-                        </tr>
-                        <tr>
-                        <td>30.6. 2021</td>
-                        <td>100401</td>
-                        <td>Linux</td>
-                        <td>Firefox</td>
-                        <td>9</td>
-                        <td>989</td>
-                        </tr>
-                        <tr>
-                        <td>30.6. 2021</td>
-                        <td>100322</td>
-                        <td>macOS</td>
-                        <td>Safari</td>
-                        <td>6</td>
-                        <td>900</td>
-                        </tr>
-                        <tr>
-                        <td>1.7. 2021</td>
-                        <td>100456</td>
-                        <td>Windows 8</td>
-                        <td>Opera</td>
-                        <td>3</td>
-                        <td>527</td>
-                        </tr>
-                            
-                    </table>
-                </div>
-            </div>
-            <div class="container-right">
-            
-                <div class="chart">
-                    
-                    <p class="chart-title">Podíl zařízení za poslední měsíc</p>
-
-                                
-
-                    <canvas id="secondChart"></canvas>
-                    <div  class="chart-spec-left">
-                        <p>Chrome</p> 
-                        <p>Firefox</p>
-                    </div>
-                    <div class="chart-spec-right">
-                        <p>34%</p>
-                        <p>10%</p>
-                    </div>      
-                </div>
-                
-                    
-                
-                    
-                
-                
-            </div>
-            
+        <div class="menu-admin">
+          <i class="fas fa-user-circle"></i>
+          <p>Admin</p>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        <footer></footer>
+      </navbar>
+
+      <div class="boxgrid">
+        <div class="boxgrid-box-green">
+          <p class="box-text-bold">120</p>
+          <p class="box-text">NOVÝCH UŽIVATELŮ</p>
+          <p class="box-text"><i class="fas fa-level-up-alt"></i> 10%</p>
+        </div>
+        <div class="boxgrid-box-blue">
+          <p class="box-text-bold">2500</p>
+          <p class="box-text">ZOBRAZENÍ</p>
+          <p class="box-text"><i class="fas fa-level-up-alt"></i> 25%</p>
+        </div>
+        <div class="boxgrid-box-yellow">
+          <p class="box-text-bold">270</p>
+          <p class="box-text">PROKLIKŮ</p>
+          <p class="box-text"><i class="fas fa-level-down-alt"></i> -4%</p>
+        </div>
+        <div class="boxgrid-box-red">
+          <p class="box-text-bold">138</p>
+          <p class="box-text">SDÍLENÍ</p>
+          <p class="box-text"><i class="fas fa-level-down-alt"></i> -8%</p>
+        </div>
+      </div>
+
+      <div class="container-big">
+        <div class="container-left">
+          <div class="chart">
+            <p class="chart-title">Statistika návštěvnosti</p>
+            <div class="chart-spec-right">
+              <p><i class="fas fa-long-arrow-alt-up"></i>10%</p>
+              <p>Průměrný nárůst</p>
+            </div>
+            <canvas id="firstChart"></canvas>
+          </div>
+
+          <div class="scroll">
+            <table class="table">
+              <tr>
+                <th>Naposledy</th>
+                <th>ID</th>
+                <th>OS</th>
+                <th>Prohlížeč</th>
+                <th>Dnes</th>
+                <th>Celkem</th>
+              </tr>
+              <tr>
+                <td>28.6. 2021</td>
+                <td>100308</td>
+                <td>Windows 10</td>
+                <td>Firefox</td>
+                <td>25</td>
+                <td>2225</td>
+              </tr>
+              <tr>
+                <td>1.7. 2021</td>
+                <td>100255</td>
+                <td>Android</td>
+                <td>Chrome</td>
+                <td>20</td>
+                <td>2123</td>
+              </tr>
+              <tr>
+                <td>28.6. 2021</td>
+                <td>100422</td>
+                <td>iOS</td>
+                <td>Safari</td>
+                <td>15</td>
+                <td>1565</td>
+              </tr>
+              <tr>
+                <td>28.6. 2021</td>
+                <td>100356</td>
+                <td>Windows 8</td>
+                <td>Chrome</td>
+                <td>11</td>
+                <td>1132</td>
+              </tr>
+              <tr>
+                <td>30.6. 2021</td>
+                <td>100401</td>
+                <td>Linux</td>
+                <td>Firefox</td>
+                <td>9</td>
+                <td>989</td>
+              </tr>
+              <tr>
+                <td>30.6. 2021</td>
+                <td>100322</td>
+                <td>macOS</td>
+                <td>Safari</td>
+                <td>6</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td>1.7. 2021</td>
+                <td>100456</td>
+                <td>Windows 8</td>
+                <td>Opera</td>
+                <td>3</td>
+                <td>527</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="container-right">
+          <div class="chart2">
+            <p class="chart2-title">Podíl zařízení za poslední měsíc</p>
+            <canvas id="secondChart" style="margin: 35px 0"></canvas>
+            <div class="chart2-flex">
+              <p>Chrome</p>
+              <div class="flex-div">
+                <i class="fas fa-sort-up"></i>
+                <p>10%</p>
+              </div>
+            </div>
+            <div class="chart2-flex">
+              <p>Firefox</p>
+              <div class="flex-div">
+                <i class="fas fa-sort-up"></i>
+                <p>34%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>2021 © <b>Depth Charge Software s.r.o.</b></p>
+        <a href="#">Domovská stránka</a>
+      </footer>
     </div>
     <script>
-        window.onload = function() {
-            var ctx = document.getElementById("firstChart").getContext('2d');
+      window.onload = function () {
+        var ctx = document.getElementById("firstChart").getContext("2d");
 
-            var firstChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                labels: ["3", "6", "9", "12", "16", "20", "24", "28", "30"],
-                datasets: [
-                    {
-                        label: 'My First Dataset',
-                        data: [100, 70, 100, 50, 70, 55, 85, 60, 40],
-                        fill: true,
-                        backgroundColor: 'rgba(75, 192, 192, .623)',
-                        borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                    },
-                    {
-                        label: 'My Sceond Dataset',
-                        data: [30, 40, 35, 80, 50, 40, 25, 50, 70],
-                        fill: true,
-                        backgroundColor: 'rgba(75, 0, 130, .623)',
-                        borderColor: 'rgb(75,0,130)',
-                        tension: 0.1
-                    }
-            
-                ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    
-                
-                }
-            });
+        var firstChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["3", "6", "9", "12", "16", "20", "24", "28", "30"],
+            datasets: [
+              {
+                label: "My First Dataset",
+                data: [100, 70, 100, 50, 70, 55, 85, 60, 40],
+                fill: true,
+                backgroundColor: "rgba(75, 192, 192, .623)",
+                borderColor: "rgb(75, 192, 192)",
+                tension: 0.1,
+              },
+              {
+                label: "My Sceond Dataset",
+                data: [30, 40, 35, 80, 50, 40, 25, 50, 70],
+                fill: true,
+                backgroundColor: "rgba(75, 0, 130, .623)",
+                borderColor: "rgb(75,0,130)",
+                tension: 0.1,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+          },
+        });
 
-            var ctx2 = document.getElementById("secondChart").getContext('2d');
+        var ctx2 = document.getElementById("secondChart").getContext("2d");
 
-            var secondChart = new Chart(ctx2, {
-                type: 'doughnut',
-                data: {
-                    labels: ["Počítač", "Mobil", "Tablet"],
-                    datasets: [{
-                        label: 'My First Dataset',
-                        data: [52, 27, 21],
-                        
-                        backgroundColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(54, 162, 235)',
-                            'rgb(255, 205, 86)'
-                        ],
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    legend: {
-                        position: 'right',
-                        align: 'middle',
-                    },
-                }
-            });
-        }
+        var secondChart = new Chart(ctx2, {
+          type: "doughnut",
+          data: {
+            labels: ["Počítač", "Mobil", "Tablet"],
+            datasets: [
+              {
+                label: "My First Dataset",
+                data: [52, 27, 21],
+
+                backgroundColor: [
+                  "rgb(255, 99, 132)",
+                  "rgb(54, 162, 235)",
+                  "rgb(255, 205, 86)",
+                ],
+                hoverOffset: 4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            legend: {
+              position: "right",
+              align: "middle",
+            },
+          },
+        });
+      };
     </script>
-</body>
+  </body>
 </html>
