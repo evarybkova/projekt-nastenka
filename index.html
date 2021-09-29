@@ -6,24 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="style.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0b5ce08098.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/0b5ce08098.js" crossorigin="anonymous"></script>
     <title>Document</title>
   </head>
   <body>
     <ul class="sidebar">
-      <input type="checkbox" class="menu__checkbox" id="menu-checkbox" />
-      <li class="da">
-        <h2 class="h2-small">DA</h2>
-        <h2 class="h2-big">DCSoft - Admin</h2>
+      <input type="checkbox" class="menu-checkbox" id="menu-checkbox"/>
+      <li class="sidebar-title">
+        <h2 class="sidebar-title-small">DA</h2>
+        <h2 class="sidebar-title-big">DCSoft - Admin</h2>
       </li>
       <li class="sidebar-active">
         <i class="fas fa-th-large"></i>
@@ -86,8 +80,7 @@
       <navbar class="menu">
         <div class="menu-searchbar">
           <label for="menu-checkbox" class="menu__toggler"><i class="fas fa-bars"></i></label>
-          <input
-            class="searchbar" type="text" placeholder="Vyhledat" name="search"/><i class="fas fa-search"></i>
+          <input class="searchbar" type="text" placeholder="Vyhledat" name="search"/><i class="fas fa-search"></i>
         </div>
         <div class="menu-admin">
           <i class="fas fa-user-circle"></i>
@@ -127,7 +120,7 @@
               <p><i class="fas fa-long-arrow-alt-up"></i>10%</p>
               <p>Průměrný nárůst</p>
             </div>
-            <canvas id="firstChart"></canvas>
+            <canvas id="first-chart"></canvas>
           </div>
 
           <div class="scroll">
@@ -202,7 +195,7 @@
         <div class="container-right">
           <div class="chart2">
             <p class="chart2-title">Podíl zařízení za poslední měsíc</p>
-            <canvas id="secondChart" style="margin: 35px 0"></canvas>
+            <canvas id="second-chart" style="margin-bottom: 35px"></canvas>
             <div class="chart2-flex">
               <p>Chrome</p>
               <div class="flex-div">
@@ -227,7 +220,7 @@
     </div>
     <script>
       window.onload = function () {
-        var ctx = document.getElementById("firstChart").getContext("2d");
+        var ctx = document.getElementById("first-chart").getContext("2d");
 
         var firstChart = new Chart(ctx, {
           type: "line",
@@ -235,7 +228,7 @@
             labels: ["3", "6", "9", "12", "16", "20", "24", "28", "30"],
             datasets: [
               {
-                label: "My First Dataset",
+                label: "Minulý měsíc",
                 data: [100, 70, 100, 50, 70, 55, 85, 60, 40],
                 fill: true,
                 backgroundColor: "rgba(75, 192, 192, .623)",
@@ -243,7 +236,7 @@
                 tension: 0.1,
               },
               {
-                label: "My Sceond Dataset",
+                label: "Tento měsíc",
                 data: [30, 40, 35, 80, 50, 40, 25, 50, 70],
                 fill: true,
                 backgroundColor: "rgba(75, 0, 130, .623)",
@@ -258,7 +251,7 @@
           },
         });
 
-        var ctx2 = document.getElementById("secondChart").getContext("2d");
+        var ctx2 = document.getElementById("second-chart").getContext("2d");
 
         var secondChart = new Chart(ctx2, {
           type: "doughnut",
@@ -281,11 +274,16 @@
           options: {
             responsive: true,
             maintainAspectRatio: true,
-            legend: {
-              position: "right",
-              align: "middle",
+            plugins: {
+              legend: {
+                position: "right",
+                align: "middle",
+                labels: {
+                  padding: 30,
+                }
+              },
             },
-          },
+          }
         });
       };
     </script>
